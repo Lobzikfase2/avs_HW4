@@ -1,0 +1,87 @@
+     1                                  extern FEATURE
+     2                                  extern CARTOON
+     3                                  extern DOCUMENTARY
+     4                                  
+     5                                  global FILM_FUNC
+     6                                  FILM_FUNC:
+     7                                  
+     8                                  section .text
+     9 00000000 55                      push rbp
+    10 00000001 4889E5                  mov rbp, rsp
+    11                                      
+    12                                      
+    13                                      
+    14 00000004 B905000000                  mov rcx, 5 
+    15 00000009 813F10270000                cmp dword [rdi], 10000          
+    16 0000000F 7320                        jae done
+    17 00000011 48FFC9                      dec rcx                  
+    18 00000014 813FE8030000                cmp dword [rdi], 1000          
+    19 0000001A 7315                        jae done
+    20 0000001C 48FFC9                      dec rcx       
+    21 0000001F 833F64                      cmp dword [rdi], 100          
+    22 00000022 730D                        jae done
+    23 00000024 48FFC9                      dec rcx               
+    24 00000027 833F0A                      cmp dword [rdi], 10         
+    25 0000002A 7305                        jae done
+    26 0000002C 48FFC9                      dec rcx 
+    27 0000002F 7300                        jae done 
+    28                                      
+    29                                  done:
+    30                                  section .bss
+    31 00000000 <res 00000008>              .count     resb 8
+    32 00000008 <res 00000008>              .res       resb 8
+    33                                  section .text
+    34 00000031 48890C25[00000000]          mov [.count], rcx
+    35 00000039 4C8B1425[00000000]          mov r10, [.count]
+    36                                      
+    37 00000041 9BDBE3                      finit
+    38                                      ;add rdi, 4
+    39 00000044 448B5F04                    mov r11d, [rdi+4]
+    40 00000048 44891C25[08000000]          mov [.res], r11d
+    41 00000050 D90425[08000000]            fld dword [.res]
+    42 00000057 DA3425[00000000]            fidiv dword [.count]
+    43 0000005E D91425[08000000]            fst dword [.res]
+    44 00000065 4C8B1425[08000000]          mov r10, [.res]
+    45                                      
+    46                                  
+    47                                  
+    48 0000006D C9                      leave
+    49 0000006E C3                      ret
+    50                                  
+    51                                  global ContainerFuncAverage
+    52                                  ContainerFuncAverage:
+    53                                  section .data
+    54 00000000 0000000000000000            .sum    dq  0.0
+    55                                  section .text
+    56 0000006F 55                      push rbp
+    57 00000070 4889E5                  mov rbp, rsp
+    58                                      ;xor r12, r12 
+    59 00000073 4189F4                      mov r12d, esi            ;r12d -> ebx
+    60 00000076 4531ED                      xor r13d, r13d            ;r13d -> ecx
+    61 00000079 F20F100C25-                 movsd xmm1, [.sum]      
+    61 0000007E [00000000]         
+    62                                  .loop:
+    63 00000082 4539E5                      cmp r13d, r12d            
+    64 00000085 7D1D                        jge .return            
+    65                                  
+    66 00000087 4989FB                      mov r11, rdi           
+    67 0000008A E871FFFFFF                  call FILM_FUNC 
+    68 0000008F F2490F2AC2                  cvtsi2sd  xmm0, r10         
+    69 00000094 F20F58C8                    addsd xmm1, xmm0      
+    70 00000098 49FFC5                      inc r13                 
+    71 0000009B 4983C310                    add r11, 16            
+    72 0000009F 4C89DF                      mov rdi, r11           
+    73 000000A2 EBDE                        jmp .loop
+    74                                  .return:
+    75 000000A4 F20F10C1                    movsd xmm0, xmm1
+    76                                      
+    77                                      ;finit
+    78                                     ; movsd [.sum], xmm0
+    79                                     ; fld dword [.sum]
+    80                                     ; fidiv dword [ecx]
+    81                                     ; fst dword [.sum]
+    82                                    ;  movsd xmm0, [.sum]
+    83                                      
+    84                                      
+    85 000000A8 C9                      leave
+    86 000000A9 C3                      ret

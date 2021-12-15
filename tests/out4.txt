@@ -1,0 +1,101 @@
+Filled container:
+0: It is Documentary film: Title = 98538, Year = 2010, Duration (m.) = 191, Function result = 402.000000.
+1: It is Feature film: Title = 41475, Year = 1929, Director = 6366, Function result = 386.000000.
+2: It is Documentary film: Title = 26447, Year = 1932, Duration (m.) = 73, Function result = 386.000000.
+3: It is Documentary film: Title = 13370, Year = 1997, Duration (m.) = 80, Function result = 399.000000.
+4: It is Documentary film: Title = 87056, Year = 1913, Duration (m.) = 66, Function result = 383.000000.
+5: It is Cartoon film: Title = 30560, Year = 2004, Function result = 401.000000, Type = plasticine.
+6: It is Documentary film: Title = 59856, Year = 1905, Duration (m.) = 93, Function result = 381.000000.
+7: It is Feature film: Title = 49808, Year = 1943, Director = 10300, Function result = 389.000000.
+8: It is Documentary film: Title = 16230, Year = 2013, Duration (m.) = 204, Function result = 403.000000.
+9: It is Feature film: Title = 30806, Year = 2012, Director = 66120, Function result = 402.000000.
+10: It is Cartoon film: Title = 75332, Year = 1989, Function result = 398.000000, Type = puppet.
+11: It is Cartoon film: Title = 65653, Year = 1921, Function result = 384.000000, Type = hand drawn.
+12: It is Feature film: Title = 32057, Year = 1944, Director = 64327, Function result = 389.000000.
+13: It is Feature film: Title = 82998, Year = 1895, Director = 96636, Function result = 379.000000.
+14: It is Feature film: Title = 7182, Year = 1940, Director = 63693, Function result = 485.000000.
+15: It is Cartoon film: Title = 13743, Year = 1960, Function result = 392.000000, Type = plasticine.
+16: It is Documentary film: Title = 22046, Year = 1990, Duration (m.) = 63, Function result = 398.000000.
+17: It is Documentary film: Title = 45770, Year = 1961, Duration (m.) = 132, Function result = 392.000000.
+18: It is Cartoon film: Title = 35213, Year = 2009, Function result = 402.000000, Type = puppet.
+19: It is Cartoon film: Title = 42979, Year = 2012, Function result = 402.000000, Type = puppet.
+20: It is Cartoon film: Title = 55398, Year = 1966, Function result = 393.000000, Type = hand drawn.
+21: It is Feature film: Title = 72074, Year = 1962, Director = 85574, Function result = 392.000000.
+22: It is Feature film: Title = 36133, Year = 1994, Director = 36908, Function result = 399.000000.
+23: It is Cartoon film: Title = 22262, Year = 1905, Function result = 381.000000, Type = hand drawn.
+24: It is Feature film: Title = 70929, Year = 1897, Director = 96820, Function result = 379.000000.
+25: It is Documentary film: Title = 28290, Year = 1970, Duration (m.) = 195, Function result = 394.000000.
+26: It is Documentary film: Title = 1679, Year = 1946, Duration (m.) = 110, Function result = 486.000000.
+27: It is Documentary film: Title = 48427, Year = 1969, Duration (m.) = 121, Function result = 394.000000.
+28: It is Cartoon film: Title = 44156, Year = 1943, Function result = 389.000000, Type = plasticine.
+29: It is Documentary film: Title = 5927, Year = 1965, Duration (m.) = 195, Function result = 491.000000.
+30: It is Documentary film: Title = 80387, Year = 1928, Duration (m.) = 67, Function result = 386.000000.
+31: It is Cartoon film: Title = 80284, Year = 1895, Function result = 379.000000, Type = puppet.
+32: It is Cartoon film: Title = 48598, Year = 1997, Function result = 399.000000, Type = plasticine.
+33: It is Documentary film: Title = 48368, Year = 2019, Duration (m.) = 171, Function result = 404.000000.
+34: It is Feature film: Title = 63292, Year = 2014, Director = 97027, Function result = 403.000000.
+35: It is Feature film: Title = 30675, Year = 1953, Director = 17207, Function result = 391.000000.
+36: It is Feature film: Title = 84698, Year = 1952, Director = 91722, Function result = 390.000000.
+37: It is Feature film: Title = 93871, Year = 1976, Director = 36007, Function result = 395.000000.
+38: It is Cartoon film: Title = 26249, Year = 2010, Function result = 402.000000, Type = plasticine.
+39: It is Documentary film: Title = 6694, Year = 1945, Duration (m.) = 135, Function result = 486.000000.
+40: It is Cartoon film: Title = 69632, Year = 2019, Function result = 404.000000, Type = hand drawn.
+41: It is Feature film: Title = 39688, Year = 1999, Director = 71369, Function result = 400.000000.
+42: It is Feature film: Title = 83300, Year = 2012, Director = 16362, Function result = 402.000000.
+43: It is Cartoon film: Title = 87442, Year = 1932, Function result = 386.000000, Type = hand drawn.
+44: It is Feature film: Title = 99641, Year = 1927, Director = 67088, Function result = 385.000000.
+45: It is Feature film: Title = 74383, Year = 1956, Director = 73093, Function result = 391.000000.
+46: It is Documentary film: Title = 35021, Year = 1905, Duration (m.) = 124, Function result = 381.000000.
+47: It is Cartoon film: Title = 76856, Year = 1938, Function result = 388.000000, Type = hand drawn.
+48: It is Feature film: Title = 1546, Year = 1978, Director = 68810, Function result = 494.000000.
+49: It is Documentary film: Title = 13046, Year = 1989, Duration (m.) = 144, Function result = 398.000000.
+50: It is Cartoon film: Title = 8579, Year = 1968, Function result = 492.000000, Type = puppet.
+51: It is Cartoon film: Title = 99789, Year = 1947, Function result = 389.000000, Type = puppet.
+52: It is Cartoon film: Title = 84302, Year = 1922, Function result = 384.000000, Type = plasticine.
+53: It is Documentary film: Title = 46989, Year = 1948, Duration (m.) = 61, Function result = 390.000000.
+54: It is Documentary film: Title = 23025, Year = 1937, Duration (m.) = 73, Function result = 387.000000.
+55: It is Documentary film: Title = 44027, Year = 1963, Duration (m.) = 89, Function result = 393.000000.
+56: It is Cartoon film: Title = 60205, Year = 2006, Function result = 401.000000, Type = plasticine.
+57: It is Documentary film: Title = 61344, Year = 1994, Duration (m.) = 171, Function result = 399.000000.
+58: It is Feature film: Title = 2227, Year = 1941, Director = 69266, Function result = 485.000000.
+59: It is Feature film: Title = 79034, Year = 1969, Director = 4109, Function result = 394.000000.
+60: It is Documentary film: Title = 88305, Year = 1913, Duration (m.) = 74, Function result = 383.000000.
+61: It is Feature film: Title = 70075, Year = 1935, Director = 16307, Function result = 387.000000.
+62: It is Feature film: Title = 58793, Year = 2007, Director = 96303, Function result = 401.000000.
+63: It is Documentary film: Title = 65069, Year = 1969, Duration (m.) = 138, Function result = 394.000000.
+64: It is Feature film: Title = 68158, Year = 1950, Director = 99187, Function result = 390.000000.
+65: It is Documentary film: Title = 81832, Year = 1909, Duration (m.) = 97, Function result = 382.000000.
+66: It is Feature film: Title = 48032, Year = 1977, Director = 89397, Function result = 395.000000.
+67: It is Cartoon film: Title = 16427, Year = 1965, Function result = 393.000000, Type = puppet.
+68: It is Cartoon film: Title = 93882, Year = 1973, Function result = 395.000000, Type = hand drawn.
+69: It is Feature film: Title = 4075, Year = 1899, Director = 58720, Function result = 475.000000.
+70: It is Documentary film: Title = 98351, Year = 1924, Duration (m.) = 152, Function result = 385.000000.
+71: It is Documentary film: Title = 4680, Year = 1901, Duration (m.) = 90, Function result = 475.000000.
+72: It is Feature film: Title = 68552, Year = 1911, Director = 4003, Function result = 382.000000.
+73: It is Feature film: Title = 61654, Year = 1977, Director = 41426, Function result = 395.000000.
+74: It is Cartoon film: Title = 77766, Year = 2015, Function result = 403.000000, Type = puppet.
+75: It is Cartoon film: Title = 23333, Year = 1966, Function result = 393.000000, Type = hand drawn.
+76: It is Feature film: Title = 54211, Year = 1900, Director = 82835, Function result = 380.000000.
+77: It is Feature film: Title = 99936, Year = 1980, Director = 24476, Function result = 396.000000.
+78: It is Documentary film: Title = 1901, Year = 1951, Duration (m.) = 131, Function result = 488.000000.
+79: It is Documentary film: Title = 18534, Year = 1916, Duration (m.) = 176, Function result = 383.000000.
+80: It is Documentary film: Title = 52255, Year = 1931, Duration (m.) = 83, Function result = 386.000000.
+81: It is Documentary film: Title = 93155, Year = 1996, Duration (m.) = 100, Function result = 399.000000.
+82: It is Cartoon film: Title = 15705, Year = 1914, Function result = 383.000000, Type = puppet.
+83: It is Cartoon film: Title = 6455, Year = 1935, Function result = 484.000000, Type = plasticine.
+84: It is Documentary film: Title = 15625, Year = 2001, Duration (m.) = 108, Function result = 400.000000.
+85: It is Feature film: Title = 88286, Year = 1967, Director = 19171, Function result = 393.000000.
+86: It is Feature film: Title = 38239, Year = 1978, Director = 96429, Function result = 396.000000.
+87: It is Feature film: Title = 47912, Year = 1906, Director = 47180, Function result = 381.000000.
+88: It is Documentary film: Title = 65575, Year = 1897, Duration (m.) = 62, Function result = 379.000000.
+89: It is Documentary film: Title = 75512, Year = 2003, Duration (m.) = 117, Function result = 401.000000.
+90: It is Feature film: Title = 15973, Year = 1935, Director = 30916, Function result = 387.000000.
+91: It is Cartoon film: Title = 72439, Year = 1924, Function result = 385.000000, Type = puppet.
+92: It is Cartoon film: Title = 34562, Year = 1959, Function result = 392.000000, Type = plasticine.
+93: It is Documentary film: Title = 44463, Year = 1996, Duration (m.) = 152, Function result = 399.000000.
+94: It is Cartoon film: Title = 16642, Year = 1904, Function result = 381.000000, Type = plasticine.
+95: It is Documentary film: Title = 93619, Year = 2018, Duration (m.) = 205, Function result = 404.000000.
+96: It is Cartoon film: Title = 79609, Year = 1898, Function result = 380.000000, Type = plasticine.
+97: It is Documentary film: Title = 30763, Year = 1939, Duration (m.) = 71, Function result = 388.000000.
+98: It is Documentary film: Title = 57977, Year = 1918, Duration (m.) = 198, Function result = 384.000000.
+99: It is Cartoon film: Title = 72730, Year = 1912, Function result = 382.000000, 

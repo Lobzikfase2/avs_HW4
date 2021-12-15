@@ -1,0 +1,247 @@
+     1                                  extern printf
+     2                                  extern rand
+     3                                  
+     4                                  extern FEATURE
+     5                                  extern CARTOON
+     6                                  extern DOCUMENTARY
+     7                                  
+     8                                  global RandomType
+     9                                  RandomType:
+    10                                  section .data
+    11 00000000 0300000000000000            .iT     dq       3
+    12 00000008 52616E646F6D206E75-         .rndNumFmt       db "Random number = %d",10,0
+    12 00000011 6D626572203D202564-
+    12 0000001A 0A00               
+    13                                  section .text
+    14 00000000 55                      push rbp
+    15 00000001 4889E5                  mov rbp, rsp
+    16                                  
+    17 00000004 4831C0                      xor     rax, rax    
+    18 00000007 E8(00000000)                call    rand        
+    19 0000000C 4831D2                      xor     rdx, rdx   
+    20 0000000F 48F73C25[00000000]          idiv    qword[.iT]      
+    21 00000017 4889D0                      mov     rax, rdx
+    22 0000001A 48FFC0                      inc     rax         
+    23                                  
+    24 0000001D C9                      leave
+    25 0000001E C3                      ret
+    26                                  
+    27                                  global RandomString
+    28                                  RandomString:
+    29                                  section .data
+    30 0000001C B782010000000000            .iS          dq 98999      
+    31 00000024 52616E646F6D206E75-         .rndNumFmt   db "Random number = %d",10,0
+    31 0000002D 6D626572203D202564-
+    31 00000036 0A00               
+    32                                  section .text
+    33 0000001F 55                      push rbp
+    34 00000020 4889E5                  mov rbp, rsp
+    35                                  
+    36 00000023 4831C0                      xor     rax, rax    
+    37 00000026 E8(00000000)                call    rand      
+    38 0000002B 4831D2                      xor     rdx, rdx    
+    39 0000002E 48F73C25[1C000000]          idiv    qword[.iS]       
+    40 00000036 4889D0                      mov     rax, rdx
+    41 00000039 4805E8030000                add     rax, 1000
+    42                                  
+    43 0000003F C9                      leave
+    44 00000040 C3                      ret
+    45                                  
+    46                                  global RandomYear
+    47                                  RandomYear:
+    48                                  section .data
+    49 00000038 7E00000000000000            .iY          dq 126  
+    50 00000040 52616E646F6D206E75-         .rndNumFmt   db "Random number = %d",10,0
+    50 00000049 6D626572203D202564-
+    50 00000052 0A00               
+    51                                  section .text
+    52 00000041 55                      push rbp
+    53 00000042 4889E5                  mov rbp, rsp
+    54                                  
+    55 00000045 4831C0                      xor     rax, rax    
+    56 00000048 E8(00000000)                call    rand      
+    57 0000004D 4831D2                      xor     rdx, rdx    
+    58 00000050 48F73C25[38000000]          idiv    qword[.iY]       
+    59 00000058 4889D0                      mov     rax, rdx
+    60 0000005B 480567070000                add     rax, 1895
+    61                                  
+    62 00000061 C9                      leave
+    63 00000062 C3                      ret
+    64                                  
+    65                                  global RandomDuration
+    66                                  RandomDuration:
+    67                                  section .data
+    68 00000054 9600000000000000            .iD          dq 150
+    69 0000005C 52616E646F6D206E75-         .rndNumFmt   db "Random number = %d",10,0
+    69 00000065 6D626572203D202564-
+    69 0000006E 0A00               
+    70                                  section .text
+    71 00000063 55                      push rbp
+    72 00000064 4889E5                  mov rbp, rsp
+    73                                  
+    74 00000067 4831C0                      xor     rax, rax    
+    75 0000006A E8(00000000)                call    rand       
+    76 0000006F 4831D2                      xor     rdx, rdx    
+    77 00000072 48F73C25[54000000]          idiv    qword[.iD]     
+    78 0000007A 4889D0                      mov     rax, rdx
+    79 0000007D 4883C03C                    add     rax, 60
+    80                                  
+    81 00000081 C9                      leave
+    82 00000082 C3                      ret
+    83                                  
+    84                                  
+    85                                  global InRndFeature
+    86                                  InRndFeature:
+    87                                  section .bss
+    88 00000000 <res 00000008>              .pfeature  resq 1   
+    89                                  section .text
+    90 00000083 55                      push rbp
+    91 00000084 4889E5                  mov rbp, rsp
+    92                                  
+    93 00000087 48893C25[00000000]          mov     [.pfeature], rdi
+    94 0000008F E88BFFFFFF                  call    RandomString
+    95 00000094 488B1C25[00000000]          mov     rbx, [.pfeature]
+    96 0000009C 8903                        mov     [rbx], eax
+    97 0000009E E89EFFFFFF                  call    RandomYear
+    98 000000A3 488B1C25[00000000]          mov     rbx, [.pfeature]
+    99 000000AB 894304                      mov     [rbx+4], eax
+   100 000000AE E86CFFFFFF                  call    RandomString
+   101 000000B3 488B1C25[00000000]          mov     rbx, [.pfeature]
+   102 000000BB 894308                      mov     [rbx+8], eax
+   103                                  
+   104 000000BE C9                      leave
+   105 000000BF C3                      ret
+   106                                  
+   107                                  
+   108                                  global InRndCartoon
+   109                                  InRndCartoon:
+   110                                  section .bss
+   111 00000008 <res 00000008>              .pcartoon  resq 1   
+   112                                  section .text
+   113 000000C0 55                      push rbp
+   114 000000C1 4889E5                  mov rbp, rsp
+   115                                  
+   116 000000C4 48893C25[08000000]          mov     [.pcartoon], rdi
+   117 000000CC E84EFFFFFF                  call    RandomString
+   118 000000D1 488B1C25[08000000]          mov     rbx, [.pcartoon]
+   119 000000D9 8903                        mov     [rbx], eax
+   120 000000DB E861FFFFFF                  call    RandomYear
+   121 000000E0 488B1C25[08000000]          mov     rbx, [.pcartoon]
+   122 000000E8 894304                      mov     [rbx+4], eax
+   123 000000EB E810FFFFFF                  call    RandomType
+   124 000000F0 488B1C25[08000000]          mov     rbx, [.pcartoon]
+   125 000000F8 894308                      mov     [rbx+8], eax
+   126                                  
+   127 000000FB C9                      leave
+   128 000000FC C3                      ret
+   129                                  
+   130                                  
+   131                                  global InRndDocumentary
+   132                                  InRndDocumentary:
+   133                                  section .bss
+   134 00000010 <res 00000008>              .pdocument  resq 1   
+   135                                  section .text
+   136 000000FD 55                      push rbp
+   137 000000FE 4889E5                  mov rbp, rsp
+   138                                  
+   139 00000101 48893C25[10000000]          mov     [.pdocument], rdi
+   140 00000109 E811FFFFFF                  call    RandomString
+   141 0000010E 488B1C25[10000000]          mov     rbx, [.pdocument]
+   142 00000116 8903                        mov     [rbx], eax
+   143 00000118 E824FFFFFF                  call    RandomYear
+   144 0000011D 488B1C25[10000000]          mov     rbx, [.pdocument]
+   145 00000125 894304                      mov     [rbx+4], eax
+   146 00000128 E836FFFFFF                  call    RandomDuration
+   147 0000012D 488B1C25[10000000]          mov     rbx, [.pdocument]
+   148 00000135 894308                      mov     [rbx+8], eax
+   149                                  
+   150 00000138 C9                      leave
+   151 00000139 C3                      ret
+   152                                  
+   153                                  global InRndFilm
+   154                                  InRndFilm:
+   155                                  section .data
+   156 00000070 52616E646F6D206E75-         .rndNumFmt  db "Random number = %d",10,0
+   156 00000079 6D626572203D202564-
+   156 00000082 0A00               
+   157                                  section .bss
+   158 00000018 <res 00000008>              .pfilm      resq    1  
+   159 00000020 <res 00000004>              .key        resd    1   
+   160                                  section .text
+   161 0000013A 55                      push rbp
+   162 0000013B 4889E5                  mov rbp, rsp
+   163                                  
+   164 0000013E 48893C25[18000000]          mov [.pfilm], rdi
+   165                                  
+   166 00000146 4831C0                      xor     rax, rax    
+   167 00000149 E8B2FEFFFF                  call    RandomType   
+   168 0000014E 488B3C25[18000000]          mov     rdi, [.pfilm]
+   169 00000156 8907                        mov     [rdi], eax     
+   170 00000158 3B0425[00000000]            cmp eax, [FEATURE]
+   171 0000015F 7416                        je .featureInrnd
+   172 00000161 3B0425[00000000]            cmp eax, [CARTOON]
+   173 00000168 741D                        je .cartoonInRnd
+   174 0000016A 3B0425[00000000]            cmp eax, [DOCUMENTARY]
+   175 00000171 7424                        je .documentInRnd
+   176 00000173 31C0                        xor eax, eax        
+   177 00000175 EB30                        jmp     .return
+   178                                  .featureInrnd:
+   179 00000177 4883C704                    add     rdi, 4
+   180 0000017B E803FFFFFF                  call    InRndFeature
+   181 00000180 B801000000                  mov     eax, 1      
+   182 00000185 EB20                        jmp     .return
+   183                                  .cartoonInRnd:
+   184 00000187 4883C704                    add     rdi, 4
+   185 0000018B E830FFFFFF                  call    InRndCartoon
+   186 00000190 B801000000                  mov     eax, 1    
+   187 00000195 EB10                        jmp     .return
+   188                                  .documentInRnd:
+   189 00000197 4883C704                    add     rdi, 4
+   190 0000019B E85DFFFFFF                  call    InRndDocumentary
+   191 000001A0 B801000000                  mov     eax, 1     
+   192 000001A5 EB00                        jmp     .return
+   193                                  .return:
+   194 000001A7 C9                      leave
+   195 000001A8 C3                      ret
+   196                                  
+   197                                  global InRndContainer
+   198                                  InRndContainer:
+   199                                  section .bss
+   200 00000024 <res 00000008>              .pcont  resq    1   
+   201 0000002C <res 00000008>              .plen   resq    1   
+   202 00000034 <res 00000004>              .psize  resd    1   
+   203                                  section .text
+   204 000001A9 55                      push rbp
+   205 000001AA 4889E5                  mov rbp, rsp
+   206                                  
+   207 000001AD 48893C25[24000000]          mov [.pcont], rdi  
+   208 000001B5 48893425[2C000000]          mov [.plen], rsi    
+   209 000001BD 891425[34000000]            mov [.psize], edx   
+   210                                  
+   211 000001C4 31DB                        xor ebx, ebx     
+   212                                  .loop:
+   213 000001C6 39D3                        cmp ebx, edx
+   214 000001C8 7D1A                        jge     .return
+   215                                  
+   216 000001CA 57                          push rdi
+   217 000001CB 53                          push rbx
+   218 000001CC 52                          push rdx
+   219                                  
+   220 000001CD E868FFFFFF                  call    InRndFilm   
+   221 000001D2 4883F800                    cmp rax, 0          
+   222 000001D6 7E0C                        jle  .return        
+   223                                  
+   224 000001D8 5A                          pop rdx
+   225 000001D9 5B                          pop rbx
+   226 000001DA 48FFC3                      inc rbx
+   227                                  
+   228 000001DD 5F                          pop rdi
+   229 000001DE 4883C710                    add rdi, 16           
+   230                                  
+   231 000001E2 EBE2                        jmp .loop
+   232                                  .return:
+   233 000001E4 488B0425[2C000000]          mov rax, [.plen]    
+   234 000001EC 8918                        mov [rax], ebx     
+   235                                      
+   236 000001EE C9                      leave
+   237 000001EF C3                      ret
